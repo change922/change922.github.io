@@ -1,0 +1,85 @@
+  if 单选结构
+  public class if语句的单选结构 {
+	public static void main(String[] args) {
+		double d = Math.random();//Math.random()意思是随机取一个大于等于0小于1的数，【0，1）；Math.random()
+		//以被引入，不需要人为定义即可使用。
+		System.out.println(d);
+		int a = (int)(6*Math.random()+1);//因为Math.random()*6的值永远<=5,所以6*Math.random()+1的值永远<=6.
+		if(a <= 3) {System.out.println("光头！");
+
+	  }else {System.out.println("大大大！");
+
+			}
+		System.out.println("###################");
+		int w = (int)(6*Math.random()+1);//Math.random()的值与d的值不一定相同，是从新取值的。
+		int k  = (int)(6*Math.random()+1);
+		int j   = (int)(6*Math.random()+1);
+		int count = w+k+j;
+		if(count>15) {
+			System.out.println("今天运气不错，投了："+count+"点");
+		}if(count>=10&&count<15) {
+			System.out.println("今天运气一般，才投了："+count+"点");
+		}if(count<10) {
+			System.out.println("今天糟透了，才投了："+count+"点");
+
+		}
+
+	}
+
+}
+
+	if else双选结构
+	public class if语句的多选结构 {
+	public static void main(String[] args) {
+		double r = Math.random()*4;//随机取一个半径r,r<4&&r>=0;
+		double area = Math.PI*Math.pow(r, 2);//Math包中包含了高中及以下几乎所有的数学运算，可以直接调用。
+		double circle = Math.PI*2*r;
+		System.out.println("半径为："+r);
+		System.out.println("面积为："+area);
+		System.out.println("周长为:"+circle);
+		if(area<circle) {
+			System.out.println("周长比面积大！");
+		}else {
+			System.out.println("周长比面积小！");
+		}
+	}
+
+}
+
+	if else-if else-if多选结构
+	public class if语句的多选结构2 {
+	public static void main(String[] args) {
+		int age = (int)(100* Math.random()+1);//取1到100之间的随机数；
+		System.out.println(age);
+		if (age<10) {
+		System.out.println("你还是个孩子，喜欢玩！");//按照顺序计算；
+		}else if(age<22) {//已经排除了小于10的数；实际范围是age>=10&&age<22;
+		System.out.println("你还是个青少年，要好好学习！");
+		}else if(age<33) {
+		System.out.println("是成年人了，努力工作！");
+
+		}else if(age<50) {
+		System.out.println("是中年人，注意身体锻炼！");
+		}else if(age<70) {
+		System.out.println("不惑之年，心静如水！");
+		}else  {//有if必须要有（）和表达式，最后表示其他可以不用写if。
+		System.out.println("老寿星！古来稀！");
+		}
+	}
+
+
+}
+
+注意事项：if单选择结构判断条件必须写具体
+	  if else双选结构else后的语句为除if判断条件之外的所有情况
+	  if  else-if else-if多选择结构else-if之后的判断已默认排除了前面所有的判断条件，if else多选择结构最后也可以是else收尾，意为排除前面的所有情况，else if后面会加判断条件，而else{}则默认为不满足之前所有判断后执行的语句例如
+
+	  		for(int g = 1;g<=1000;g++) {
+			if(g<=100&&g%3!=0) {
+				System.out.println("我是三的倍数！我骄傲！");
+			}else if(g>250||g==500) {
+				System.out.println("我不是二百五！！！");
+			}else {
+				System.out.println("我也不造自己是个啥！");
+				}
+
