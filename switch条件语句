@@ -1,0 +1,65 @@
+//switch 结构长用于等值判断表达式的结果有定值。也可以用if else,但当boolean区间判断时只能用if  else;
+public class swich结构 {
+	public static void main(String[] args) {
+		int month = (int)(12*Math.random()+1);//取随机的一个月份；
+		System.out.println(month);
+		switch(month) {
+		case 1://当数值等于1时；
+			System.out.println("一月份了，过年了~~~");
+			break;//switch语句会根据表达式从相匹配的case语句处运行，知道遇到default或者语句结束才停止！
+		case 2://若表达式的值与任意case的值不匹配则直接进入default（如果有default语句的话！）
+			System.out.println("二月份了，天气还是有点冷！");
+			break;
+		case 3:
+			System.out.println("三月份了，开春了！");
+			break;
+		case 4:
+			System.out.println("四月份了，天气暖和了！");
+			break;
+		case 8:
+			System.out.println("三伏天，晒死人了！");
+			break;
+		default:
+			System.out.println("啊哈！我是其他月份！");
+			break;
+		
+		}//switch语句中的case标签在1.5之前必须是整数（long类型除外）或者枚举，不能是字符串，1.7之后可以是字符串。
+		char c = 'a';
+		char c2 = (char)(26*Math.random()+c);
+		System.out.print(c2+":");
+		
+		switch (c2) {
+		case 'a':
+		case 'e':
+		case 'i':
+		case 'o':
+		case 'u':
+			System.out.println("元音");
+		break;
+		case 'y':
+		case 'w':
+			System.out.println("半元音");
+		break;
+		
+		default:
+			System.out.println("辅音");
+			
+		
+			
+		}
+	}
+}
+
+    case标签为字符串
+    	String s="gaga";
+		switch (s){
+		case "gaga":
+			System.out.println("是鸭子");
+			break;
+		case "wangwang":
+			System.out.println("是狗子");
+
+			break;
+			default:
+				System.out.println("未知生物");
+		}
