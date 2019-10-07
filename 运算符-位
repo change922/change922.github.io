@@ -1,0 +1,17 @@
+public class 位运算符 {
+	public static void main(String[] args) {
+		int a = 3;//3用2进制表示为0 0 1 1；1为真，0为假。
+		int b = 4;//4用2进制表示为0 1 0 0；
+		System.out.println(a&b);//将a b 的2进制码进行与运算，得出的2进制码在以数字输出。
+		System.out.println(a|b);//将 a b 的2进制码进行或运算，得出的2进制码在数字输出。
+		System.out.println(~b);//将a b 的2进制码进行非运算，得出的2进制码在数字输出。
+		System.out.println(a^b);//将a b 的2进制码进行异或运算，得出的2进制码在数字输出。
+		//移位运算
+		System.out.println(a>>2);//将a右移两位，变成0 0 0 0 ，输出为0，除开为0000的情况
+		//实际上是将a缩小了2的2次方被。
+		System.out.println(b<<2);//将a左移两位，变成1 0 0 0 0，输出为12，实际上为扩大了2的
+		//2次方被。
+		System.out.println();
+	}//移位运算比乘除法快的多。
+}
+

@@ -1,0 +1,33 @@
+public class 强制类型转换 {
+	public static void main(String[] args) {
+		double a = 40.15;
+		//int b = a;
+		int b = (int)a;//将小数类型强制转换为整数类型是将小数部分直接舍去，有精度丢失 。强制转换的方法是在数据前面
+		//将需要的数据类型用（）括起来。
+		System.out.println(b);
+		int c = 100000000;
+		short g = (short)c;//当强制转换的类型范围小于数据的大小时将会发生溢出，得到的数据不准确。
+		System.out.println(g);
+		int money = 2000000000;
+		int year = 20;
+		int k = money*year;
+		long o = money*year;//虽然money*year的范围在long内，但是溢出了int的范围，money*year时先计算成int类型
+		//发生溢出再转换成long类型为时已晚。所以计算结果不是正确的int类型
+		//无法直接用long接收。经历不要使用l来表示long类型，容易和1混淆。
+		int p = 22;
+		int t =2000000000;
+		long r = money+t;//计算顺序为先将money+t计算成int类型，在转换成long类型，结果有溢出，所以不能自动转换。
+		long u = money+p;//先计算money+p的结果表示为int类型，在转换成long类型，结果没有溢出，可以自动转换。
+		long j = c*year;//计算结果为int类型，有溢出，无法自动转换；
+		System.out.println(u);
+		System.out.println(o);
+		System.out.println(k);
+		
+		String shouru = "收入为："+money*(long)year;//解决溢出的办法，在计算过程中强制转换数据类型（结果不会溢出）
+		//的类型。
+		System.out.println(shouru);
+		System.out.println(r);
+		System.out.println(j);
+	}
+
+}

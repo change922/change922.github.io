@@ -1,0 +1,21 @@
+public class 逻辑运算符 {
+	public static void main(String[] args) {
+		boolean a = true;
+		boolean b = false;
+		System.out.println(a & b);//与运算，a.b均为true则结果为true，否则为false;
+		System.out.println(a | b);//或运算，a,b均为false则结果为false，否则为true;
+		System.out.println(a ^ b);//异或运算，a,b的结果不同为true，相同为false；
+		System.out.println(!  b);//非运算，即为取反，b为true则结果为false，b为false则
+		//结果为true;
+		System.out.println(a && b);//短路与，效果和与运算相同，但计算顺序不同，先判断
+		//a,若为false，则直接输出false，不判断b,若为true，再判断b,为true则为true，为
+		//false则为false。
+		System.out.println(a || b );//短路或，效果与或相同，先判断a,若为true则直接输出
+		//true,不判断b;若为false，再判断b，为true则输出true，为false则输出false;
+		boolean f = 2 <1  &&  (4/0)<2 ;//判断左边为false直接输出false，4/0为非法操作
+		//并未进行计算；
+		System.out.println(f);
+		//优先级^优于&优于|。
+	}
+
+

@@ -1,0 +1,11 @@
+public class TestConstant {
+public static void main(String[] args) {
+	int i=10;//i是变量，10是常量
+	double a=22;//a是变量，22是常量
+	String name="嘎嘎";//
+    final String s="纷纷";
+    //s="哈哈";final修饰的变量就变成了常量，不能再被修改值
+    final int k=33;//final可以修饰任意数据类型。
+}
+}
+

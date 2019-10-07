@@ -1,0 +1,47 @@
+public class 字符串连接符 {
+	public static void main(String[] args) {
+		String x = "3";//String表示字符串，首字母要大写，表示的内容用双引号引起来；
+		int a = 4;
+		int b = 3;
+		char c = '6';//char类型用''引起来;
+		System.out.println(a+x);//只要+的两边有字符串，+就是字符串连接符。
+		System.out.println(a+b);//+的两边没有字符串，就进行+运算。
+		System.out.println(x+c);//x为字符串，c为字符，+是字符串连接符；
+		System.out.println(a+c);//a,c都不是字符串，所以进行+运算，将6转换成ask码在计算。
+		System.out.println(x+a+b);//运算顺序从左到右，x为字符串，所以x+a为34；
+		System.out.println(x+a+b+c);//按从左到右的计算顺序，只要前面出现了字符串，
+		//则+作为字符串连接符；
+		System.out.println(a+b+x+c);//按从左到右的顺序计算，先计算a+b得出7，在算7+x,遇到字符串
+		//+变成字符串连接符。
+		System.out.println("11"+a+b);
+		System.out.println("请输出"+a+b);
+		System.out.println("结果"+a*b);
+		System.out.println("计算"+a+a*b);//+的优先级低于*，所以先计算a*b在算"计算"+a,为字符串，所以后面的+都为字符串
+		//连接符。
+		System.out.println(a-b+x);
+		//System.out.println(a+x+a-b);字符串无法进行-运算。
+	}
+public class 字符串连接符 {
+	public static void main(String[] args) {
+		String x = "3";//String表示字符串，首字母要大写，表示的内容用双引号引起来；
+		int a = 4;
+		int b = 3;
+		char c = '6';//char类型用''引起来;
+		System.out.println(a+x);//只要+的两边有字符串，+就是字符串连接符。
+		System.out.println(a+b);//+的两边没有字符串，就进行+运算。
+		System.out.println(x+c);//x为字符串，c为字符，+是字符串连接符；
+		System.out.println(a+c);//a,c都不是字符串，所以进行+运算，将6转换成ask码在计算。
+		System.out.println(x+a+b);//运算顺序从左到右，x为字符串，所以x+a为34；
+		System.out.println(x+a+b+c);//按从左到右的计算顺序，只要前面出现了字符串，
+		//则+作为字符串连接符；
+		System.out.println(a+b+x+c);//按从左到右的顺序计算，先计算a+b得出7，在算7+x,遇到字符串
+		//+变成字符串连接符。
+		System.out.println("11"+a+b);
+		System.out.println("请输出"+a+b);
+		System.out.println("结果"+a*b);
+		System.out.println("计算"+a+a*b);//+的优先级低于*，所以先计算a*b在算"计算"+a,为字符串，所以后面的+都为字符串
+		//连接符。
+		System.out.println(a-b+x);
+		//System.out.println(a+x+a-b);字符串无法进行-运算。
+	}
+}}

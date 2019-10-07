@@ -1,0 +1,88 @@
+import java.math.BigDecimal;
+
+//public class helloworld {
+	//	public  static void main(String[] args/*参数*/) {
+	/*		System.out.println("hello,world!I am coming" );
+		}
+		
+
+}*/
+//单行注释，“//后面的一行均为注释;
+/*  */    /*
+// 多行注释，不能嵌套使用,可用于行内注释/**/
+ /**文档注释，注释中包含一些说明性文字和javaDoc标签（后期写项目时可以直接生成项目的	API）*/
+
+
+//八种基本数据类型：
+/*boolean (布尔类型，占用一个位（八个位为一个字节，字节Byte）表示判断，
+ * true;false 真
+ * 假，默认值false);
+byte(字节型，占用1个字节，范围为：-127~128，默认值0);
+short(短整形，占用2个字节，范围：-.32768~32767，默认值0);
+int(整形，占用4个字节，范围+-2^31，最大值要减一因为有0,
+即-2147483648~2147483648默认值0);
+long(长整形，占用8个字节，范围+-2^63，最大值减一因为有0，
+即-9223372036854775808~9223372036854775808，默认值为0);
+float(浮点单精度，占用4个字节，范围-3.403E38~3.403E38,默认值0.0F);
+double(浮点双精度，占用8个字节，范围-1.798E308~1.798E308,	默认值0.0D);
+char(字符型，占用2个字节，范围0~65535，默认值\u0000);
+java的整型默认数据类型是int,浮点是double.long,double,float要在值后大写第一个首字母；
+*/
+//数据类型的例子
+public class number {
+	
+	public static void main(	String[] args) {
+		
+		boolean a = true;
+		byte b = 122;
+		short c= 233;
+		int d = 4;
+		long e = 233333;
+		float g = 4.12F;
+		double h = 3.1415926;
+		System.out.println(a+" "+b+c);
+		short f =(short) d;
+		System.out.println(f);
+		int a1 = 032;	//以0开头的为8进制，逢8进1；
+		int a2 = 0b1101;//以0b开头的是2进制，逢2进1；
+		int a3 =0x32;//以0x开头的是16进制，逢16进1；16进制（0 1 2 3 4 5 6 7 8 9 
+		//a b c d e f);
+
+		System.out.println(a1+" "+a2+" "+a3);
+		//浮点数是不精确的，不要用于比较。
+		double d1=0.1;
+		double d2=1/10;
+		//System.out.println(d1.equals(d2));double类型不能调用equals方法，因为是近似值。
+		//可以使用	BigDecimal类实现任意精度的浮点运算，
+		BigDecimal  bd=	BigDecimal.valueOf(1.0);
+		bd=bd.subtract(BigDecimal.valueOf(0.1));//减去0.1；
+		bd=bd.subtract(BigDecimal.valueOf(0.1));
+		bd=bd.subtract(BigDecimal.valueOf(0.1));
+		bd=bd.subtract(BigDecimal.valueOf(0.1));
+		System.out.println(bd);
+		System.out.println(1.0-0.1-0.1-0.1-0.1);
+		BigDecimal bd1=BigDecimal.valueOf(0.1);
+		BigDecimal bd2=BigDecimal.valueOf(1.0/10.0);//数字必须是浮点类型(小数)。
+		System.out.println(bd1.equals(bd2));
+		
+		//char m='aa';char类型表示单一的字符，只能是一个。	Unicode具有从0到65535之间的编码，用'\u0000'到'\uFFFF'的
+		//十六进制来表示，前缀为u表示Unicode字符集。
+		char m='a';
+		char l='金';//汉字也是字符，
+		char k='\u0061';//字符可以用Unicode码表示。
+		System.out.println(k);
+		System.out.println(m+l);//直接相加会按数字进行计算。
+		System.out.println(""+m+l);//若想直接打印字符，可以加入字符串。
+		System.out.println(""+m+'\n'+l);//可以加\n换行。
+		System.out.println(""+m+'\t'+l);//加入水平制表符。
+		System.out.println(""+m+'\''+l);//加入单引号。
+	
+	
+	}
+
+	 
+	}
+		//整形常量的默认类型是int;  浮点型常量的默认类型是double;
+		//浮点型常量 double;float 均是近似值，不用于金融行业，float可以精确7位有效数字，
+		//double是float的两倍，所以叫双精度。
+		

@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class 使用scanner{
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("请输入职业： ");
+		String work = scanner.nextLine();
+		System.out.println("请输入性别: ");
+		String sex = scanner.nextLine();
+		System.out.println("请输入修为： ");
+		int strength = scanner.nextInt();
+		System.out.println("我的职业："+work);
+		System.out.println("我的性别："+sex);
+		System.out.println("我的修为："+strength);
+		
+	
+	}
+} 
+
+

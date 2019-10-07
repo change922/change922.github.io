@@ -1,0 +1,25 @@
+public class 关系运算符 {
+		public static void main(String[] args) {
+			int a = 1;
+			int b = 2;
+			a = b;//a = b 表示将b的值赋给a;
+			a = 5;
+			System.out.println(a);
+			System.out.println(a == b);//a == b 表示将a,b的值进行比较，
+			//判断a等不等于b;
+			System.out.println(a < b);//判断a是否小于b;
+			System.out.println(a > b);//判断a是否大于b;
+			System.out.println(a <= b);//判断a是否小于等于b;
+			System.out.println(a != b);//判断a是否不等于b;
+			System.out.println(a >= b);//判断a是否大于等于b;
+			char c = 'c';
+			char f = 'f';
+			System.out.println(c);
+			System.out.println(a > c);//char类型在比较时会自动转成int类型。
+			System.out.println((int)c);//强制转换
+			System.out.println(0+c);//算数运算默认int类型；
+			System.out.println(254E-4+c);//算数运算有long类型输出long类型；
+		}//a = b表示将b的值赋给a,a == b表示判断a是否等于b;
+}/* < > <= >= 只用于数值类型和char类型的比较；
+char类型在比较是会自动转换成int类型；*/
+

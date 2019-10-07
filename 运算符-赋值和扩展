@@ -1,0 +1,20 @@
+public class 赋值及其扩展运算符 {
+	public static void main(String[] args) {
+		int a = 4;
+		int b = 8;
+		a+=b;
+		int c = a+b;
+		c += c+a;
+		System.out.println("a:"+a);
+		System.out.println(a+c);
+		c *=c;
+		System.out.println("c:"+c);
+		c*=c+a*4;//总是先计算等号右边的值，在于左边进行*=。
+		System.out.println(c);//*a = c;将c的值赋给a. a += c相当于a = a+c.    a*=c.a/=c,
+		//a -= c* a % c;//算法相同，都是想将右边的值计算出来在于左边进行运算。
+		a = a++;//a先赋值在自增；
+		a = ++a;//a先自增在赋值；自减相同；
+		System.out.println(a);
+	}
+}
+

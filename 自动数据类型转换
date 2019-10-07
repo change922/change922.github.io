@@ -1,0 +1,20 @@
+public class 自动类型转换 {
+	public static void main(String[] args) {
+		int a = 453;
+		//short b = a;453>short的范围，所以是非法的；
+		long b = a;//long的范围大于int的范围。
+		int c = 111;
+		//short d = c;因为前面已经定义了c的类型为int类型，int类型的范围>short,所以不能直接转换。
+		short f = 111;//虽然整数型的数据类型默认为int，但111在short的范围中，可以自动转换；
+		float h = b;//float的范围>long类型，可以直接转换；
+		double k = h;//double的范围>float,可以直接转换；
+		long g = c;
+		float l = 1234577777l;
+		float o= 3.14f;//小数类型的默认类型是double，不能直接转换为float；
+		//自动类型转化的关键是数据类型的范围，不是数据类型本身的字节大小，范围小的可以自动转化为范围大的，整数型
+		//数据类型默认是int类型，只要不超过范围，且没有人为定义就可以写成short，byte等。
+		
+	}
+	
+
+}

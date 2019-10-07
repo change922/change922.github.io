@@ -1,0 +1,23 @@
+public class TestVariable {
+	int i;
+	int k=i+1;//类中的变量如果没有手动初始化会自动初始化为默认值，数字是0，boolean是false,成员变量从属于对象，生命周期
+	//随对象变化
+			
+	public static void main(String[] args) {
+		System.out.println("变量分为：局部变量(local variable)，方法和语句块中的变量；成员变量(member variable)类中的"
+				+ "变量；静态变量(static variable)实际是类变量生命周期从类的加载到卸载");
+	}
+	void test() {
+		int i=1;//方法中的局部变量使用时需要进行初始化(赋值)，作用域在方法内部，生命周期最短
+		int j=i+1;
+	}
+	{
+		double d=222;//语句块中的局部变量
+	}
+
+	static void key() {
+	int k=1;
+	int h=k+1;
+		
+}
+}
